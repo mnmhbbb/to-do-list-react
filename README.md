@@ -1,5 +1,6 @@
-# To Do List (react Ver.)
-### 1. 이름: 할 일 목록 관리 앱 리액트로 만들기
+# To Do List (react Ver.)  
+https://mnmhbbb.github.io/to-do-list-react/index.html
+### 1. 이름: 할 일 목록 관리 앱 리액트로 만들기  
 ### 2. 사용한 기술:   
 React - useReducer, useContext(Context API), react-live-clock 등
 ### 3. 주요 기능 및 특징   
