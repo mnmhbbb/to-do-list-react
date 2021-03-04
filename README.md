@@ -96,6 +96,53 @@ const TodoHeader = () => {
   // const state = useContext(TodoStateContext);
 ```
 - 그러면, 아래 주석처리한 코드 대신 간단하게 state 값을 가져올 수 있다.
+- 새로운 할 일 항목을 추가할 때 `concat(action.todo)`로 불변성을 유지하면서 새로운 항목을 추가하는 액션을 실행하는데,  
+  그 todo에 들어갈 값을 다음과 같이 작성한다.
+```javascript
+const TodoInput = () => {
+  const [value, setValue] = useState("");
+  const dispatch = useTodoDispatch();
+  const nexdId = useTodoNexId();
+
+  const onChange = (e) => setValue(e.target.value);
+
+  const addItem = (e) => {
+    e.preventDefault();
+
+    dispatch({
+      type: "ADD",
+      
+      //새로운 항목 추가
+      todo: {
+        id: nexdId.current,
+        text: value,
+        checked: false,
+      },
+    });
+    setValue("");
+    nexdId.current += 1;
+  };
+
+  return (
+    <TodoInputStyle>
+      <div className="divider"></div>
+      <InputBtn>
+        <input
+          placeholder="오늘 할 일을 입력하세요!"
+          value={value}
+          onChange={onChange}
+          required
+        />
+        <button onClick={addItem}>
+          <FaArrowUp />
+        </button>
+      </InputBtn>
+    </TodoInputStyle>
+  );
+};
+
+export default TodoInput;
+```
 ### 4. 기타
 - 1초마다 바뀌는 시계 부분을 구현하려고 고민하던 중 `react-live-clock` 라이브러리를 알게 되어서 사용하였다.
 - `npm i react-live-clock react-moment moment-timezone` 을 설치하고 공식문서에 나온 형식으로   
