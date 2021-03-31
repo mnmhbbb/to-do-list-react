@@ -10,7 +10,21 @@ React - useReducer, useContext(context API), react-live-clock 등
 - 구현 중 막히는 부분은 벨로퍼트님의 [투두리스트](https://react.vlpt.us/mashup-todolist/) 자료를 보고 추가 공부하였다.
 - reducer와 context api를 사용하여, state를 효율적으로 관리하고 넘길 수 있었다.
 - 컴포넌트 구조
-- ![img](https://user-images.githubusercontent.com/66292371/112706345-ef19cd80-8ee6-11eb-8f5c-5cadfea1d11f.png)
+```javascript
+function App() {
+  return (
+    <TodoProvider>
+      <GlobalStyle />
+      <TodoTable>
+        <TodoHeader />
+        <TodoList />
+        <TodoInput />
+      </TodoTable>
+    </TodoProvider>
+  );
+}
+```
+- ![img](https://user-images.githubusercontent.com/66292371/113146282-6f835a00-926a-11eb-8da7-ffeae7552499.png)
   - TodoTable.js: 모든 컴포넌트를 감싸는 테이블 역할을 함
   - TodoHeader.js: 헤더부분, 1초마다 바뀌는 시계와 현재 체크가 되지 않은 목록을 나타냄
   - TodoList.js: map 함수로 TodoItem을 렌더링하여 할 일 목록들을 가지고 있음. 
