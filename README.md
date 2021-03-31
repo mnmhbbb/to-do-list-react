@@ -1,14 +1,14 @@
-# To Do List (react Ver.)  
+# To Do List (react ver.)  
 https://mnmhbbb.github.io/to-do-list-react
 ### 1. 이름: 할 일 목록 관리 앱 리액트로 만들기  
 ### 2. 사용한 기술:   
-React - useReducer, useContext(Context API), react-live-clock 등
+React - useReducer, useContext(context API), react-live-clock 등
 ### 3. 주요 기능 및 특징   
 ![gif](https://user-images.githubusercontent.com/66292371/109854558-87cb7d80-7c9a-11eb-9c33-66274f8752a2.gif)
 - 바닐라자바스크립트로 구현한 기능을 거의 동일하게 만들었다.
 - 스타일링은 `styled-components`를 사용하였다. 클래스이름 짓는 고민을 덜 수 있어서 좋았다.
 - 구현 중 막히는 부분은 벨로퍼트님의 [투두리스트](https://react.vlpt.us/mashup-todolist/) 자료를 보고 추가 공부하였다.
-- Reducer와 Context api를 사용하여, state를 효율적으로 관리하고 넘길 수 있었다.
+- reducer와 context api를 사용하여, state를 효율적으로 관리하고 넘길 수 있었다.
 - 컴포넌트 구조
 - ![img](https://user-images.githubusercontent.com/66292371/112706345-ef19cd80-8ee6-11eb-8f5c-5cadfea1d11f.png)
   - TodoTable.js: 모든 컴포넌트를 감싸는 테이블 역할을 함
